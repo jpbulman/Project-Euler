@@ -12,10 +12,11 @@ function arrDigits(num){
         digits[current_digit]+=1;
         //Take off the right digit
         num/=10;
-        //Take off decimal because 
+        //Take off decimal because JS is dumb
         num=Math.floor(num);
     }
 
+    //Give back the array
     return digits;
 }
 
@@ -33,6 +34,7 @@ function arrayEq(ar1, ar2){
     return true;
 }
 
+//Main part of the problem, see https://projecteuler.net/problem=52
 for(var x=10;x<999999;x++){
 
     one = arrDigits(x);
