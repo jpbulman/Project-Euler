@@ -144,8 +144,13 @@ def handOneWins(hand1, hand2):
     if(rankH1==rankH2):
         if(rankH1 is 9 or rankH1 is 5 or rankH1 is 6):
             return highestCardThatsIsNotBlank(hand1,-1)>highestCardThatsIsNotBlank(hand2,-1)
-        if(rankH1==7):
+        elif(rankH1 is 7):
             return handHasNOfAKind(hand1,3)>handHasNOfAKind(hand2,3)
+        elif(rankH1 is 8):
+            if(handHasNOfAKind(hand1,4)==handHasNOfAKind(hand2,4)):
+                return highestCardThatsIsNotBlank(hand1,handHasNOfAKind(hand1,4))>highestCardThatsIsNotBlank(hand2,handHasNOfAKind(hand2,4))
+            else:
+                return handHasNOfAKind(hand1,4)>handHasNOfAKind(hand2,4)
 
     return rankH1>rankH2
 
