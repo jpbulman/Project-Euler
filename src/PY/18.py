@@ -7,6 +7,7 @@ def printArr(arry):
     for i in arry:
         print(i)
 
+
 # The starting right index of each row as we fill in numbers
 right = n-1
 y=n-1
