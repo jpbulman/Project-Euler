@@ -40,5 +40,6 @@ while True:
     numberOfFacts = numberOfFactors(triangle)
     if numberOfFacts >= 500:
         print(triangle)
+        print(i)
         break
     i += 1
